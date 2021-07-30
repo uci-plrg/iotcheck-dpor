@@ -1,0 +1,26 @@
+
+medicine-management-contact-sensor.groovy--initial-state-event-sender.groovy
+
+medicine-management-contact-sensor.groovy--initialstate-smart-app-v1.2.0.groovy
+
+medicine-management-contact-sensor.groovy--unbuffered-event-sender.groovy
+
+medicine-management-contact-sensor.groovy--circadian-daylight.groovy
+==> DEBUG: State reduction mode                : false
+==> DEBUG: Number of events                    : 0
+==> DEBUG: Number of transitions               : 6318
+==> DEBUG: Number of unique transitions (DPOR) : 0
+
+
+medicine-management-temp-motion.groovy--initial-state-event-sender.groovy
+
+medicine-management-temp-motion.groovy--initialstate-smart-app-v1.2.0.groovy
+
+medicine-management-temp-motion.groovy--unbuffered-event-sender.groovy
+
+medicine-management-temp-motion.groovy--circadian-daylight.groovy
+==> DEBUG: State reduction mode                : false
+==> DEBUG: Number of events                    : 0
+==> DEBUG: Number of transitions               : 10500
+==> DEBUG: Number of unique transitions (DPOR) : 0
+

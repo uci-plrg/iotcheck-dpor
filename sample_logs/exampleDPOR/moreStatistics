@@ -1,0 +1,56 @@
+
+medicine-management-contact-sensor.groovy--initial-state-event-sender.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 78
+==> DEBUG: Number of transitions               : 1493
+==> DEBUG: Number of unique transitions (DPOR) : 1241
+
+
+medicine-management-contact-sensor.groovy--initialstate-smart-app-v1.2.0.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 78
+==> DEBUG: Number of transitions               : 1493
+==> DEBUG: Number of unique transitions (DPOR) : 1241
+
+
+medicine-management-contact-sensor.groovy--unbuffered-event-sender.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 78
+==> DEBUG: Number of transitions               : 1493
+==> DEBUG: Number of unique transitions (DPOR) : 1240
+
+
+medicine-management-contact-sensor.groovy--circadian-daylight.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 13
+==> DEBUG: Number of transitions               : 3084
+==> DEBUG: Number of unique transitions (DPOR) : 2729
+
+
+medicine-management-temp-motion.groovy--initial-state-event-sender.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 79
+==> DEBUG: Number of transitions               : 2751
+==> DEBUG: Number of unique transitions (DPOR) : 2277
+
+
+medicine-management-temp-motion.groovy--initialstate-smart-app-v1.2.0.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 79
+==> DEBUG: Number of transitions               : 2751
+==> DEBUG: Number of unique transitions (DPOR) : 2277
+
+
+medicine-management-temp-motion.groovy--unbuffered-event-sender.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 79
+==> DEBUG: Number of transitions               : 2753
+==> DEBUG: Number of unique transitions (DPOR) : 2277
+
+
+medicine-management-temp-motion.groovy--circadian-daylight.groovy
+==> DEBUG: State reduction mode                : true
+==> DEBUG: Number of events                    : 14
+==> DEBUG: Number of transitions               : 3530
+==> DEBUG: Number of unique transitions (DPOR) : 3133
+
