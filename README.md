@@ -127,10 +127,10 @@ For the other 7 pairs, we can also check the statistics in the corresponding fil
 my_iotcheck/iotcheck/smartthings-infrastructure $ echo "" > ../jpf-core/moreStatistics 
 my_iotcheck/iotcheck/smartthings-infrastructure $ ./iotcheck.sh -e exampleNoDPOR
 ``` 
-After this command line finishes executing, we can observe the log files. The `logList` and the other `.log` files can be found in `my_iotcheck/iotcheck/logs/exampleDPOR`. The `moreStatistics` file can be found in `my_iotcheck/iotcheck/jpf-core`. Finally, we can check the numbers obtained in these files and reconcile them with the ones shown in Tables 2 and 3 in our paper by following the description in step 4 above.
+After this command line finishes executing, we can observe the log files. The `logList` and the other `.log` files can be found in `my_iotcheck/iotcheck/logs/exampleNoDPOR`. The `moreStatistics` file can be found in `my_iotcheck/iotcheck/jpf-core`. Finally, we can check the statistics in these files, and reconcile them with the ones shown in Tables 2 and 3 in our paper by following the description in step 4 above.
 
 There are 2 exceptions for the `moreStatistics` file:
-1. There will be no numbers below the names of 6 pairs because [they did not finish running (i.e., `JPF out of memory`)](https://github.com/uci-plrg/iotcheck-dpor/blob/main/sample_logs/exampleNoDPOR/medicine-management-contact-sensor.groovy--initial-state-event-sender.groovy.log).
+1. There will be no numbers below the names of 6 pairs because [they did not finish running (i.e., `JPF out of memory`)](https://github.com/uci-plrg/iotcheck-dpor/blob/main/sample_logs/exampleNoDPOR/medicine-management-contact-sensor.groovy--initial-state-event-sender.groovy.log)---written as `DNF` in Table 2.
 2. It will show `0` for `Number of events` and `Number of unique transitions (DPOR)` for 2 pairs because they finished running, but we did not run the DPORStateReducerWithSummary class that is supposed to report those numbers. Thus, we only take the `Number of transitions` from this file and put it under the column **Without DPOR** (under **Trans.**), e.g., `10,500` for the pair `medicine-management-temp-motion--circadian-daylight` (number 42 in Table 3).
 
 **NOTE:** The above examples exclude the conflict detection feature that the original IoTCheck performs for every pair. We can also run `iotcheck.sh` with our DPOR implementation for conflict detection. For example, we can try the following command.
