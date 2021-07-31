@@ -43,7 +43,7 @@ my_iotcheck/iotcheck-dpor $ ./setup.sh
 
 3. We can then go into the `smartthings-infrastructure` folder and run the examples. First, let us run the new `iotcheck.sh` to see the new options.
 ```
-my_iotcheck $ cd iotcheck/smartthings-infrastructure
+my_iotcheck/iotcheck-dpor $ cd ../iotcheck/smartthings-infrastructure
 my_iotcheck/iotcheck/smartthings-infrastructure $ ./iotcheck.sh
 
 Usage:	iotcheck.sh [options]
