@@ -2,7 +2,7 @@
 This is the repository that contains the DPOR implementation for IoTCheck. Please read the [IoTCheck paper](https://2020.esec-fse.org/details/fse-2020-papers/16/Understanding-and-Automatically-Detecting-Conflicting-Interactions-between-Smart-Home) and [Github/Wiki](https://github.com/uci-plrg/iotcheck) and our IoTCheck DPOR implementation paper before using this repository.
 
 **Stateful Dynamic Partial Order Reduction for Model Checking Event-Driven Applications that Do Not Terminate**
-Rahmadi Trimananda, Weiyu Luo, Brian Demsky, Guoqing Harry Xu
+_Rahmadi Trimananda, Weiyu Luo, Brian Demsky, Guoqing Harry Xu_
 
 ## Getting Started
 Our DPOR implementation runs on IoTCheck that was built on top of [Java Pathfinder (JPF)](https://github.com/javapathfinder). Thus, this repository contains the files that are necessary to enable DPOR when running IoTCheck. First, please [install IoTCheck as per these instructions](https://github.com/uci-plrg/iotcheck/blob/master/README.md#getting-started). For the purpose of this tutorial, let us create a directory called `my_iotcheck` and download IoTCheck into it.
