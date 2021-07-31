@@ -135,6 +135,6 @@ Compared to the DPOR runs, there are 2 differences for the `moreStatistics` file
 
 **NOTE:** The above examples exclude the conflict detection feature that the original IoTCheck performs for every pair. We can also run `iotcheck.sh` with our DPOR implementation for conflict detection. For example, we can try the following command.
 ```
-my_iotcheck/iotcheck/smartthings-infrastructure $ ./iotcheck.sh -d	acfanheaterSwitches -dpor
+my_iotcheck/iotcheck/smartthings-infrastructure $ ./iotcheck.sh -d acfanheaterSwitches -dpor
 ```
-This will give us the log files in `my_iotcheck/iotcheck/acfanheaterSwitches` reporting the conflict detection results.
+This will give us the log files in `my_iotcheck/iotcheck/acfanheaterSwitches` reporting the conflict detection results. Please note that the statistics reported in the log files for conflict detection will not reflect the statistics we report in our paper. A detected conflict may halt the model checking process of a pair of apps without completely exploring all the permutations of orders of events.
