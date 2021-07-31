@@ -11,7 +11,7 @@ To understand the background, design, and implementation of IoTCheck, please rea
 To see IoTCheck in action, please [run the examples provided on the IoTCheck Github](https://github.com/uci-plrg/iotcheck/blob/master/README.md#examples) to make sure that your IoTCheck installation is good.
 
 ## Our DPOR Implementation
-After making sure that the IoTCheck installation is good, we can then use the files provided in this repository to run DPOR on IoTCheck. Our DPOR algorithm is basically implemented as a [JPF listener](https://github.com/javapathfinder/jpf-core/wiki/Listeners).
+After making sure that the IoTCheck installation is good, we can then use the files provided in this repository to run IoTCheck with DPOR. Our DPOR algorithm is basically implemented as a [JPF listener](https://github.com/javapathfinder/jpf-core/wiki/Listeners).
 
 The list of additional files provided in this repository to enable DPOR on the original IoTCheck implementation is the following (see the [dpor_implementation folder](https://github.com/uci-plrg/iotcheck-dpor/tree/main/dpor_implementation)).
 
