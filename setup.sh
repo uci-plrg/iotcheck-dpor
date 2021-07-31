@@ -11,8 +11,12 @@ cp dpor_implementation/smartthings-infrastructure/ExtractorScript.py ../iotcheck
 cp dpor_implementation/smartthings-infrastructure/ModelCheck_DPOR.py ../iotcheck/smartthings-infrastructure/
 cp dpor_implementation/smartthings-infrastructure/iotcheck.sh ../iotcheck/smartthings-infrastructure/iotcheck.sh
 
+# Compile JPF
+cd iotcheck/jpf-core/
+./gradlew
+
 # Log directory for DPOR examples
-cd ../iotcheck
+cd ..
 mkdir logs/exampleDPOR
 mkdir logs/exampleNoDPOR
 cd ..
