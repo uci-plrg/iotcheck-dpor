@@ -119,8 +119,8 @@ medicine-management-temp-motion.groovy--initial-state-event-sender.groovy
 ==> DEBUG: Number of unique transitions (DPOR) : 2277
 ...
 ```
-Here, we collect some more information printed by our DPORStateReducerWithSummary class. In Table 2 number 28, we will see `79` in column **Evt.** (i.e., number of events) and under the column **With DPOR**, we will see under **Trans.** the number `2,277` which is the number of unique transitions for DPOR (please keep in mind that a transition can be revisited in our algorithm).
-For the other 7 pairs, we can also check the numbers obtained in these files and reconcile them with the ones shown in Tables 2 and 3 in our paper.
+Here, we collect some more information printed by our DPORStateReducerWithSummary class. In Table 2 number 28, we will see `79` in column **Evt.** (i.e., number of events) and under the column **With DPOR**, we will see under **Trans.** the number `2,277` which is the number of unique transitions for DPOR (please keep in mind that a transition can be revisited multiple times in our algorithm).
+For the other 7 pairs, we can also check the statistics in the corresponding files, and reconcile them with the numbers shown in Tables 2 and 3 in our paper.
 
 5. Then, let us run the `exampleNoDPOR` option. This will take about 4 to 5 hours depending on the machine's processing power. The longer runtimes are caused by full state explorations for all 8 pairs when model-checked without our DPOR algorithm. Before running `iotcheck.sh`, we need to clean up the `moreStatistics` file.
 ```
