@@ -37,7 +37,8 @@ my_iotcheck $ git clone https://github.com/uci-plrg/iotcheck-dpor
 
 2. Run the [`setup.sh`](https://github.com/uci-plrg/iotcheck-dpor/blob/main/setup.sh) script to copy the DPOR-related files described above into their corresponding paths.
 ```
-my_iotcheck $ ./setup.sh
+my_iotcheck $ cd iotcheck-dpor
+my_iotcheck/iotcheck-dpor $ ./setup.sh
 ```
 
 3. We can then go into the `smartthings-infrastructure` folder and run the examples. First, let us run the new `iotcheck.sh` to see the new options.
