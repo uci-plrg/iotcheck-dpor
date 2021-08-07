@@ -31,7 +31,7 @@ The list of additional files provided in this repository to enable DPOR on the o
 In order to run our DPOR implementation, we need to execute the following steps. We assume that the original IoTCheck has been downloaded, installed, and tested to run correctly as per [the above instructions](https://github.com/uci-plrg/iotcheck-dpor#getting-started).
 Similar to the experimental setup reported in our paper, the following instructions were tested on an Ubuntu-based server with Intel Xeon quad-core CPU of 3.5GHz and 32GB of memory---we allocated 28GB of heap space for JVM (please see the paragraph **Experimental Setup** in **Section 6.2** in our paper).
 
-1. Download this repository into the the `my_iotcheck` directory that already contains the original IoTCheck (i.e.,`iotcheck`) that we have tested previosly.
+1. Download this repository into the the `my_iotcheck` directory that already contains the original IoTCheck (i.e.,`iotcheck`). Before we begin this step, it is assumed that we have tested our downloaded and installed `iotcheck` by [running the examples provided on the IoTCheck Github](https://github.com/uci-plrg/iotcheck/blob/master/README.md#examples).
 ```
 my_iotcheck $ ls
 iotcheck
