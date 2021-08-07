@@ -138,7 +138,7 @@ Compared to the DPOR runs, there are 2 differences for the [`moreStatistics` fil
 
 To reproduce more results for other pairs, please modify [the files `exampleDPORAppList` and `exampleDPORAppList2`](https://github.com/uci-plrg/iotcheck-dpor/blob/main/README.md#files-for-smartthings-infrastructure). Please note that the pair `medicine-management-temp-motion--initial-state-event-sender` means that `medicine-management-temp-motion.groovy` needs to be in `exampleDPORAppList` and `initial-state-event-sender.groovy` needs to be in `exampleDPORAppList2`. Please read more about [IoTCheck's pair forming here](https://github.com/uci-plrg/iotcheck#forming-pairs).
 
-**NOTE:** The above examples exclude the conflict detection feature that the original IoTCheck performs for every pair. We can also run `iotcheck.sh` with our DPOR implementation for conflict detection. For example, we can try the following command.
+**NOTE:** The above examples, as well as the results we have reported in our paper, exclude the conflict detection feature that the original IoTCheck performs for every pair. We can also run `iotcheck.sh` with our DPOR implementation for conflict detection. For example, we can try the following command.
 ```
 my_iotcheck/iotcheck/smartthings-infrastructure $ ./iotcheck.sh -d acfanheaterSwitches -dpor
 ```
