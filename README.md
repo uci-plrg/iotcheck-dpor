@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/267887969.svg)](https://zenodo.org/badge/latestdoi/267887969)
 # IoTCheck DPOR
 This is the repository that contains the DPOR implementation for IoTCheck. Please read the [IoTCheck paper](https://2020.esec-fse.org/details/fse-2020-papers/16/Understanding-and-Automatically-Detecting-Conflicting-Interactions-between-Smart-Home) and [Github/Wiki](https://github.com/uci-plrg/iotcheck) and our IoTCheck DPOR implementation paper before using this repository.
 
