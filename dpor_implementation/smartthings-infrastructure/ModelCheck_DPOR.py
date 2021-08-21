@@ -129,6 +129,10 @@ else:
 print("PHASE 2: Running JPF ...\n")
 # List down all the log file names
 writeLogList = open(jpfLogDir + "logList", "w+")
+isCommentChanged = False
+isDPOROptionChanged = False
+isConflictDetectionOptionChanged = False
+isTimerOptionChanged = False
 for item in appPairs:
 
 	# Copy apps into Extractor/App1 and Extractor/App2
@@ -151,25 +155,28 @@ for item in appPairs:
 		# Call JPF
 		print("==> Calling JPF and generate logs ...\n")
 		# Change options in main.jpf
-		changeOption('# These are JPF listeners',
-				     '# This is the listener that can detect variable write-after-write conflicts')
-		if isDPOR == 'true':
-			# activate_state_reduction=true
-			changeOption('listener=gov.nasa.jpf.listener.ConflictTracker\n' \
-						 'listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary\n\n# Options for DPORStateReducerWithSummary\nprintout_state_transition=true\n#activate_state_reduction=false\nfile_output=moreStatistics\n',
-						 'listener=gov.nasa.jpf.listener.ConflictTracker')
-		else:
-			# activate_state_reduction=false
-			changeOption('listener=gov.nasa.jpf.listener.ConflictTracker\n' \
-						 'listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary\n\n# Options for DPORStateReducerWithSummary\nprintout_state_transition=true\nactivate_state_reduction=false\nfile_output=moreStatistics\n',
-						 'listener=gov.nasa.jpf.listener.ConflictTracker')
+		if not isCommentChanged:
+			changeOption('# These are JPF listeners',
+					     '# This is the listener that can detect variable write-after-write conflicts')
+			isCommentChanged = True
+		if not isDPOROptionChanged:
+			if isDPOR == 'true':
+				# activate_state_reduction=true
+				changeOption('listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary\n\n# Options for DPORStateReducerWithSummary\nprintout_state_transition=true\n#activate_state_reduction=false\nfile_output=moreStatistics\n',
+							 'listener=gov.nasa.jpf.listener.ConflictTracker')
+			else:
+				# activate_state_reduction=false
+				changeOption('listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary\n\n# Options for DPORStateReducerWithSummary\nprintout_state_transition=true\nactivate_state_reduction=false\nfile_output=moreStatistics\n',
+							 'listener=gov.nasa.jpf.listener.ConflictTracker')
+			isDPOROptionChanged = True
 		# Deactivate conflict detection
-		if isConflictDetectionActive == 'false':
-			changeOption('#listener=gov.nasa.jpf.listener.ConflictTracker',
-						 'listener=gov.nasa.jpf.listener.ConflictTracker')
+		if isConflictDetectionActive == 'true' and not isConflictDetectionOptionChanged:
+			changeOption('listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary,gov.nasa.jpf.listener.ConflictTracker', 'listener=gov.nasa.jpf.listener.DPORStateReducerWithSummary')
+			isConflictDetectionOptionChanged = True
 		# Change timeout to 2 hours (120 minutes)
-		changeOption('timeout=120',
-				     'timeout=30')
+		if not isTimerOptionChanged:
+			changeOption('timeout=120', 'timeout=30')
+			isTimerOptionChanged = True
 		os.system("cd " + jpfDir + ";./run.sh " + jpfLogDir + logName + " main.jpf")
 	else:
 		# This is for specific error, e.g., direct-direct interaction that we need to skip
