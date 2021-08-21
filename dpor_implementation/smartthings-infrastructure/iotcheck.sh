@@ -75,8 +75,12 @@ execute_iotcheck_device()
 		if [[ $2 == '-dpor' ]]
 		then
 			python3 ModelCheck_DPOR.py ../jpf-core/ ../logs/$1/ ../smartapps/ true true appLists/device-interaction/$1AppList appLists/device-interaction/$1AppList2
-		else
+		elif [[ $2 == '' ]]
+		then
 			python3 ModelCheck.py ../jpf-core/ ../logs/$1/ ../smartapps/ appLists/device-interaction/$1AppList appLists/device-interaction/$1AppList2
+		else
+			# Print usage info if there is any mistake
+			print_usage			
 		fi
 	else
 		print_usage
@@ -93,8 +97,12 @@ execute_iotcheck_global()
 		if [[ $2 == '-dpor' ]]
 		then
 			python3 ModelCheck_DPOR.py ../jpf-core/ ../logs/$1/ ../smartapps/ true true appLists/global-state-variable-interaction/$1AppList appLists/global-state-variable-interaction/$1AppList2
-		else 
+		elif [[ $2 == '' ]]
+		then
 			python3 ModelCheck.py ../jpf-core/ ../logs/$1/ ../smartapps/ appLists/global-state-variable-interaction/$1AppList appLists/global-state-variable-interaction/$1AppList2
+		else
+			# Print usage info if there is any mistake
+			print_usage
 		fi
 	else
 		print_usage
